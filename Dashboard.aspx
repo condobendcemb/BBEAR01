@@ -2,7 +2,7 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
     <link rel="stylesheet" href="css/index.css" />
-    <h1>Dashboard xxxx</h1>
+    <h1>Dashboard yyyy</h1>
 
     <div class="dashboard-top">
         <div class="card text-end p-2 center">
