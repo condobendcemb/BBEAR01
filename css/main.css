@@ -1,0 +1,44 @@
+﻿#ctr-button button {
+    gap: 10px 20px;
+    margin-left: 5px;
+}
+
+.samesize {
+    width: 6rem;
+}
+
+.gridview-container {
+    max-width: 100%;
+    overflow-x: auto;
+    margin-top: 1rem;
+}
+
+.gridview-style {
+    width: 100%;
+    table-layout: auto;
+}
+
+.pagination-container {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.pagination-btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: 1px solid #ddd;
+    background-color: #f1f1f1;
+    text-decoration: none;
+    color: #333;
+}
+
+    .pagination-btn:hover {
+        background-color: #ddd;
+    }
+
+/* ปรับให้ข้อความใน GridView ไม่ถูกตัด */
+.gridview-style td, .gridview-style th {
+    white-space: nowrap; /* ไม่ตัดคำ */
+    overflow: hidden; /* ไม่แสดงข้อความที่เกินพื้นที่ */
+    text-overflow: ellipsis; /* ใช้ '...' เมื่อข้อความยาวเกินไป */
+}

@@ -1,0 +1,63 @@
+﻿html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+form {
+    height: 100%;
+}
+
+.d-flex {
+    display: flex;
+    height: 100%;
+}
+
+.menu-list {
+    width: 250px; /* Fixed width for menu */
+    background-color: #f8f9fa; /* Optional: Background color for the menu */
+    overflow-y: auto; /* Add scrolling if menu content overflows */
+}
+
+    .menu-list .h5-head {
+        padding: 10px;
+        background-color: #007bff;
+        color: white;
+        text-align: center;
+    }
+
+    .menu-list ol {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+        .menu-list ol li {
+            padding: 10px;
+        }
+
+            .menu-list ol li a {
+                text-decoration: none;
+                color: #333;
+            }
+
+#content {
+    flex: 1; /* Take up remaining space */
+    overflow: hidden; /* Prevent unwanted scrollbars */
+}
+
+    #content iframe {
+        width: 100%;
+        height: 100%;
+        border: none; /* Remove iframe border */
+    }
+
+a {
+    display: block; /* เพื่อให้ลิงก์แสดงเป็นบล็อกและกำหนดขนาดได้ */
+    width: 12rem; /* กำหนดความกว้างของลิงก์ */
+    word-wrap: break-word; /* ให้ตัดคำเมื่อข้อความยาวเกินความกว้าง */
+    word-break: break-word; /* สำรองการตัดคำในเบราว์เซอร์เก่า */
+    text-decoration: none;
+    color: blue;
+}
