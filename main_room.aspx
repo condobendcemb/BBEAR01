@@ -35,7 +35,7 @@
                             <asp:TextBox ID="txtRO_HOMENO" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
                         <div>
-                            <label>Date In</label>
+                            <label>Date In (เดือน/วัน/ปี)</label>
                             <asp:TextBox ID="txtRO_DATEIN" runat="server" CssClass="form-control" TextMode="Date"></asp:TextBox>
                         </div>
                         <div>

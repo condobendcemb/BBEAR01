@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="css/menu.css" />
     <link rel="stylesheet" href="Content/bootstrap.min.css" />
     <style>
-     
     </style>
 </head>
 <body>
@@ -19,18 +18,18 @@
                 <div class="h5-head">
                     <h5>MAIN</h5>
                 </div>
-                <div class="">
-                    <div>
-                        <ol>
-                            <li><a href="main_room.aspx" target="content">Room</a></li>
-                            <li><a href="main_cust.aspx" target="content">Customer</a></li>
-                            <li><a href="main_inco.aspx" target="content">Income</a></li>
-                            <li><a href="main_cash.aspx" target="content">Cash</a></li>
-                        </ol>
-                    </div>
-                    <div class="text-center">
-                        <a href="Dashboard.aspx" target="_top" class="text-decoration-none">Home</a>
-                    </div>
+                <div>
+                    <ol>
+                        <li><a href="main_room.aspx" target="content">Room</a></li>
+                        <li><a href="main_cust.aspx" target="content">Customer</a></li>
+                        <li><a href="main_inco.aspx" target="content">Income</a></li>
+                        <li><a href="main_cash.aspx" target="content">Cash</a></li>
+                    </ol>
+                </div>
+
+                <!-- Home link at the bottom -->
+                <div class="text-center">
+                    <a href="Dashboard.aspx" target="_top" class="text-decoration-none">Home</a>
                 </div>
             </div>
 
