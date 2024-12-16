@@ -24,6 +24,15 @@ namespace BBEAR01
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// ddl_roomid control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.HtmlControls.HtmlGenericControl ddl_roomid;
+
+        /// <summary>
         /// ddlRoomId control.
         /// </summary>
         /// <remarks>
@@ -78,13 +87,22 @@ namespace BBEAR01
         protected global::System.Web.UI.WebControls.TextBox txtRO_DATEIN;
 
         /// <summary>
-        /// TextBox4 control.
+        /// txtOwner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TextBox4;
+        protected global::System.Web.UI.WebControls.TextBox txtOwner;
+
+        /// <summary>
+        /// txtPE_NAME control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtPE_NAME;
 
         /// <summary>
         /// btnAdd control.
@@ -112,6 +130,15 @@ namespace BBEAR01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnDelete;
+
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
 
         /// <summary>
         /// btnCancel control.

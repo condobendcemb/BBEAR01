@@ -31,17 +31,7 @@
                     <td>
                         <asp:Label ID="Label8" runat="server"></asp:Label></td>
                 </tr>
-                <%--                <tr>
-                    <td>d</td>
-                    <td>
-                        <asp:Label ID="Label9" runat="server"></asp:Label></td>
-                </tr>
-                <tr>
-                    <td>e</td>
-                    <td>
-                        <asp:Label ID="Label10" runat="server"></asp:Label>
-                    </td>
-                </tr>--%>
+
             </table>
 
 

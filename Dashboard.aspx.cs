@@ -54,24 +54,25 @@ namespace BBEAR01
             {
                 con.Open();
 
-                string queryLastMonth = @"SELECT 
-                                              AR_YEAR,
-                                              AR_MONTH,
-                                              FORMAT(SUM([AR_AMOUNT]), 'N2') AS sum_amount,
-                                              FORMAT(SUM([AR_PAYED]), 'N2') AS sum_payed,
-                                              FORMAT(SUM([AR_AMOUNT]) - SUM([AR_PAYED]), 'N2')  AS balance
-                                       FROM [KBF].[dbo].[CMT_ARDL]
-                                       WHERE AR_AMOUNT - AR_PAYED > 0
-                                         AND YEAR(AR_DATE) = (
-                                             SELECT MAX(YEAR(AR_DATE))
-                                             FROM [KBF].[dbo].[CMT_ARDL]  )
-                                         AND MONTH(AR_DATE) = (
-                                             SELECT MONTH(MAX(AR_DATE))
-                                             FROM [KBF].[dbo].[CMT_ARDL]
-                                             WHERE YEAR(AR_DATE) = (
-                                                 SELECT MAX(YEAR(AR_DATE))
-                                                 FROM [KBF].[dbo].[CMT_ARDL]  ) )
-                                       GROUP BY AR_YEAR, AR_MONTH; ";
+                //string queryLastMonth = @"SELECT AR_YEAR,
+                //                                 AR_MONTH,
+                //                                 FORMAT(SUM([AR_AMOUNT]), 'N2') AS sum_amount,
+                //                                 FORMAT(SUM([AR_PAYED]), 'N2') AS sum_payed,
+                //                                 FORMAT(SUM([AR_AMOUNT]) - SUM([AR_PAYED]), 'N2')  AS balance
+                //                            FROM [KBF].[dbo].[CMT_ARDL]
+                //                           WHERE AR_AMOUNT - AR_PAYED > 0
+                //                             AND YEAR(AR_DATE) = (
+                //                                     SELECT MAX(YEAR(AR_DATE))
+                //                                     FROM [KBF].[dbo].[CMT_ARDL]  )
+                //                             AND MONTH(AR_DATE) = (
+                //                                     SELECT MONTH(MAX(AR_DATE))
+                //                                     FROM [KBF].[dbo].[CMT_ARDL]
+                //                                    WHERE YEAR(AR_DATE) = (
+                //                                     SELECT MAX(YEAR(AR_DATE))
+                //                                     FROM [KBF].[dbo].[CMT_ARDL]  ) )
+                //                        GROUP BY AR_YEAR, AR_MONTH; ";
+
+                string queryLastMonth = "SELECT TOP (1000) [AR_YEAR] ,[AR_MONTH] ,[sum_amount] ,[sum_payed] ,[balance] FROM [KBF].[dbo].[View_AR_Balance]";
 
                 using (SqlCommand cmd = new SqlCommand(queryLastMonth, con))
                 {
@@ -98,21 +99,23 @@ namespace BBEAR01
                     }
                 }
 
-                string queryAllBalance = @"WITH AR_SUM AS (
-                                                              SELECT SUM([AR_TOTAL]) AS SUM_AR
-                                                              FROM [KBF].[dbo].[CMT_ARHD]
-                                                          ),
-                                                          RC_SUM AS (
-                                                              SELECT SUM([RC_TOTAL]) AS SUM_RC
-                                                              FROM [KBF].[dbo].[CMT_RCHD]
-                                                              WHERE RC_ARNO IS NOT NULL
-                                                          )
-                                                          SELECT 
-                                                              FORMAT(AR_SUM.SUM_AR, 'N2') AS SUM_AR,
-                                                              FORMAT(RC_SUM.SUM_RC, 'N2') AS SUM_RC,
-                                                              FORMAT(AR_SUM.SUM_AR - RC_SUM.SUM_RC, 'N2') AS Difference
-                                                          FROM AR_SUM, RC_SUM;
-                                                          ";
+                //string queryAllBalance = @"WITH AR_SUM AS (
+                //                                              SELECT SUM([AR_TOTAL]) AS SUM_AR
+                //                                              FROM [KBF].[dbo].[CMT_ARHD]
+                //                                          ),
+                //                                RC_SUM AS (
+                //                                              SELECT SUM([RC_TOTAL]) AS SUM_RC
+                //                                              FROM [KBF].[dbo].[CMT_RCHD]
+                //                                              WHERE RC_ARNO IS NOT NULL
+                //                                          )
+                //                                SELECT 
+                //                                              FORMAT(AR_SUM.SUM_AR, 'N2') AS SUM_AR,
+                //                                              FORMAT(RC_SUM.SUM_RC, 'N2') AS SUM_RC,
+                //                                              FORMAT(AR_SUM.SUM_AR - RC_SUM.SUM_RC, 'N2') AS Difference
+                //                                FROM AR_SUM, RC_SUM;
+                //                                          ";
+
+                string queryAllBalance = "SELECT TOP (1000) [SUM_AR] ,[SUM_RC] ,[Difference] FROM [KBF].[dbo].[View_AR_RC_Difference]";
 
                 using (SqlCommand cmd = new SqlCommand(queryAllBalance, con))
                 {
