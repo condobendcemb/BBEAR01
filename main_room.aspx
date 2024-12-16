@@ -12,7 +12,17 @@
     <form id="form1" runat="server">
         <div>
             <div class="p-3 sticky-top bg-white">
-                <h5>Room</h5>
+
+                <div class="d-flex justify-content-between p-2">
+                    <div>
+                        <h5>Room</h5>
+                    </div>
+
+                    <div class="row text-end">
+                        <asp:Label ID="lblheader" runat="server"></asp:Label>
+                    </div>
+                </div>
+
                 <div class="border-bottom p-3 shadow">
 
                     <div class="d-flex justify-content-start flex-wrap gap-2">
@@ -20,15 +30,15 @@
 
                             <div id="ddl_roomid" runat="server">
                                 <label>Room ID</label>
-                                <asp:DropDownList ID="ddlRoomId" runat="server" CssClass="form-control" AutoPostBack="true" OnSelectedIndexChanged="ddlRoomId_SelectedIndexChanged">
+                                <asp:DropDownList ID="ddlRoomId" runat="server" CssClass="form-control" AutoPostBack="true" Width="210px"
+                                    OnSelectedIndexChanged="ddlRoomId_SelectedIndexChanged">
                                 </asp:DropDownList>
                             </div>
 
                             <div id="newRoomDiv" runat="server" visible="false" class="">
-                                <label>Add New Room ID</label>
+                                <label>New Room ID</label>
                                 <div class="input-group">
                                     <asp:TextBox ID="txtNewRoomId" runat="server" CssClass="form-control"></asp:TextBox>
-                                    <asp:Button ID="btnAddNewRoom" runat="server" Text="Add" CssClass="btn btn-primary" OnClick="btnAddNewRoom_Click" />
                                 </div>
                             </div>
                         </div>
@@ -45,7 +55,12 @@
                         </div>
                         <div>
                             <label>Owner ID</label>
-                            <asp:TextBox ID="txtOwner" runat="server" CssClass="form-control"></asp:TextBox>
+                            <asp:DropDownList ID="ddlOwner" runat="server" CssClass="form-control" AutoPostBack="true" Width="210px"
+                                OnSelectedIndexChanged="ddlOwner_SelectedIndexChanged">
+                            </asp:DropDownList>
+
+
+                            <%--<asp:TextBox ID="txtOwner" runat="server" CssClass="form-control"></asp:TextBox>--%>
                         </div>
 
                         <div>
@@ -53,12 +68,34 @@
                             <asp:TextBox ID="txtPE_NAME" runat="server" CssClass="form-control"></asp:TextBox>
                         </div>
 
+                        <div>
+                            <label>Area</label>
+                            <asp:TextBox ID="txtRO_AREA" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                            <script>
+                                document.getElementById('<%= txtRO_AREA.ClientID %>').setAttribute('step', '0.01');
+                            </script>
+                        </div>
+
+                        <div>
+                            <label>Ratio</label>
+                            <asp:TextBox ID="txtRO_RATIO" runat="server" CssClass="form-control" TextMode="Number"></asp:TextBox>
+                            <script>
+                                document.getElementById('<%= txtRO_RATIO.ClientID %>').setAttribute('step', '0.01');
+                            </script>
+                        </div>
+
+                        <asp:Label ID="lblError" runat="server"></asp:Label>
+
                     </div>
 
                     <div class="d-flex justify-content-end mt-2" id="ctr-button">
                         <asp:Button ID="btnAdd" runat="server" CssClass="btn btn-success me-2 samesize" Text="ADD" OnClick="btnAdd_Click" />
                         <asp:Button ID="btnEdit" runat="server" CssClass="btn btn-success me-2 samesize" Text="EDIT" OnClick="btnEdit_Click" />
-                        <asp:Button ID="btnDelete" runat="server" CssClass="btn btn-success me-2 samesize" Text="DELETE" OnClick="btnDelete_Click" />
+
+                        <asp:Button ID="btnDelete" runat="server" CssClass="btn btn-success me-2 samesize" Text="DELETE"
+                            OnClick="btnDelete_Click"
+                            OnClientClick="return confirm('Are you sure you want to delete this?');" />
+
                         <asp:Button ID="btnSave" runat="server" CssClass="btn btn-success me-2 samesize" Text="SAVE" OnClick="btnSave_Click" />
                         <asp:Button ID="btnCancel" runat="server" CssClass="btn btn-success samesize" Text="CANCEL" OnClick="btnCancel_Click" />
                     </div>

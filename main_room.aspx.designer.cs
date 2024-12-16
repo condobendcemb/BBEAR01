@@ -24,6 +24,15 @@ namespace BBEAR01
         protected global::System.Web.UI.HtmlControls.HtmlForm form1;
 
         /// <summary>
+        /// lblheader control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblheader;
+
+        /// <summary>
         /// ddl_roomid control.
         /// </summary>
         /// <remarks>
@@ -60,15 +69,6 @@ namespace BBEAR01
         protected global::System.Web.UI.WebControls.TextBox txtNewRoomId;
 
         /// <summary>
-        /// btnAddNewRoom control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnAddNewRoom;
-
-        /// <summary>
         /// txtRO_HOMENO control.
         /// </summary>
         /// <remarks>
@@ -87,13 +87,13 @@ namespace BBEAR01
         protected global::System.Web.UI.WebControls.TextBox txtRO_DATEIN;
 
         /// <summary>
-        /// txtOwner control.
+        /// ddlOwner control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtOwner;
+        protected global::System.Web.UI.WebControls.DropDownList ddlOwner;
 
         /// <summary>
         /// txtPE_NAME control.
@@ -103,6 +103,33 @@ namespace BBEAR01
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPE_NAME;
+
+        /// <summary>
+        /// txtRO_AREA control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRO_AREA;
+
+        /// <summary>
+        /// txtRO_RATIO control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtRO_RATIO;
+
+        /// <summary>
+        /// lblError control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblError;
 
         /// <summary>
         /// btnAdd control.
