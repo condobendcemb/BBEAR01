@@ -19,8 +19,8 @@
                 <div>
                     <div>
                         <ol>
-                            <li><a href="rpt_invoice.aspx" target="content">Report Invoice</a></li>
-                            <li><a href="rpt_invoice.aspx" target="content">Report Invoice</a></li>
+                            <li><a href="Report/rpt_invoice.aspx" target="content">Report Invoice</a></li>
+                            <li><a href="Report/rpt_invoice.aspx" target="content">Report Invoice</a></li>
                         </ol>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
 
             <!-- Main Content -->
             <div id="content">
-                <iframe src="rpt_invoice.aspx" name="content" title="Content"></iframe>
+                <iframe src="Report/rpt_invoice.aspx" name="content" title="Content"></iframe>
             </div>
         </div>
     </form>

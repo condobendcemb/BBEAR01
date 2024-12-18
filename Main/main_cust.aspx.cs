@@ -138,10 +138,13 @@ namespace BBEAR01
         {
             ddlCustIdDiv.Visible = false;
             newCustDiv.Visible = true;
+            txtPE_NAME.Text = string.Empty;
 
             btnAdd.CssClass = "btn btn-secondary me-2 samesize";
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
+            btnSave.Enabled = true;
+            btnCancel.Enabled = true;
 
             lblheader.Text = "เพิ่ม/Add";
         }

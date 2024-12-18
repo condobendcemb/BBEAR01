@@ -5,8 +5,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head runat="server">
     <title>ROOM</title>
-    <link rel="stylesheet" href="Content/bootstrap.min.css" />
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../Content/bootstrap.min.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 </head>
 <body>
     <form id="form1" runat="server">
@@ -133,7 +133,7 @@
             </div>--%>
         </div>
     </form>
-    <script src="Scripts/bootstrap.min.js"></script>
+    <script src="../Scripts/bootstrap.min.js"></script>
 
 </body>
 

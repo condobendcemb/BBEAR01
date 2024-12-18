@@ -221,30 +221,6 @@ namespace BBEAR01
 
         }
 
-        //protected void btnAddNewRoom_Click(object sender, EventArgs e)
-        //{
-        //    string newRoomId = txtNewRoomId.Text.Trim();
-
-        //    if (!string.IsNullOrEmpty(newRoomId))
-        //    {
-        //        // เพิ่ม Room ใหม่ลงใน DropDownList
-        //        ddlRoomId.Items.Insert(ddlRoomId.Items.Count - 1, new ListItem(newRoomId, newRoomId));
-
-        //        // ตั้งค่าให้เลือก Room ที่เพิ่มใหม่
-        //        ddlRoomId.SelectedValue = newRoomId;
-
-        //        // ซ่อน TextBox และเคลียร์ค่า
-        //        newRoomDiv.Visible = false;
-        //        txtNewRoomId.Text = string.Empty;
-        //    }
-        //    else
-        //    {
-        //        // แจ้งเตือนผู้ใช้หากไม่ได้ป้อน Room ID ใหม่
-        //        // (เพิ่มข้อความแจ้งเตือนที่เหมาะสม เช่น ผ่าน Label)
-
-        //    }
-        //}
-
         private void SettingControlOn()
         {
 

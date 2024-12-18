@@ -19,9 +19,9 @@
                 <div>
                     <div>
                         <ol>
-                            <li><a href="trn_invoice.aspx" target="content">Invoice</a></li>
-                            <li><a href="trn_receipt.aspx" target="content">Receipt</a></li>
-                            <li><a href="trn_record.aspx" target="content">Record</a></li>
+                            <li><a href="Transection/trn_invoice.aspx" target="content">Invoice</a></li>
+                            <li><a href="Transection/trn_receipt.aspx" target="content">Receipt</a></li>
+                            <li><a href="Transection/trn_record.aspx" target="content">Record</a></li>
                         </ol>
                     </div>
                 </div>
@@ -31,7 +31,7 @@
             </div>
             <!-- Main Content -->
             <div id="content">
-                <iframe src="trn_invoice.aspx" name="content" title="Content"></iframe>
+                <iframe src="Transection/trn_invoice.aspx" name="content" title="Content"></iframe>
             </div>
         </div>
     </form>

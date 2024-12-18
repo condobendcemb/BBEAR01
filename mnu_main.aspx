@@ -20,10 +20,10 @@
                 </div>
                 <div>
                     <ol>
-                        <li><a href="main_room.aspx" target="content">Room</a></li>
-                        <li><a href="main_cust.aspx" target="content">Customer</a></li>
-                        <li><a href="main_inco.aspx" target="content">Income</a></li>
-                        <li><a href="main_cash.aspx" target="content">Cash</a></li>
+                        <li><a href="Main/main_room.aspx" target="content">Room</a></li>
+                        <li><a href="Main/main_cust.aspx" target="content">Customer</a></li>
+                        <li><a href="Main/main_inco.aspx" target="content">Income</a></li>
+                        <li><a href="Main/main_cash.aspx" target="content">Cash</a></li>
                     </ol>
                 </div>
 
@@ -35,7 +35,7 @@
 
             <!-- Main Content -->
             <div id="content">
-                <iframe src="main_room.aspx" name="content" title="Content"></iframe>
+                <iframe src="Main/main_room.aspx" name="content" title="Content"></iframe>
             </div>
         </div>
     </form>
